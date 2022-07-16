@@ -7,7 +7,7 @@ ruta = os.chdir('C:\\Users\\Cassandra\\Desktop\\Prueba') # permite cambiar de di
 
 archivo = open('prueba.txt')
 
-#ruta = os.makedirs('C:\\Users\\Cassandra\\Desktop\\Prueba\\otra') # sirve para crear directorios como MD
+ruta = os.makedirs('C:\\Users\\Cassandra\\Desktop\\Prueba\\otra') # sirve para crear directorios como MD
 
 ruta = 'C:\\Users\\Cassandra\\Desktop\\Ultimo Curso de Python\\Sexto Dia\\prueba.txt'
 

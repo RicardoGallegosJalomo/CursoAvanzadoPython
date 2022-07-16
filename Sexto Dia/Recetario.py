@@ -1,5 +1,5 @@
 import os
-from funciones import categorias_crear_recetas,categorias
+from funciones import categorias_crear_recetas,categorias,crear_categoria,eleminar_receta,eliminar_categoria
 
 os.system('cls')
 
@@ -30,11 +30,11 @@ while opcion != 6:
 		elif int(opcion) == 2:
 			categorias_crear_recetas()
 		elif int(opcion) == 3:
-			pass 
+			crear_categoria() 
 		elif int(opcion) == 4:
-			pass 
+			eleminar_receta() 
 		elif int(opcion) == 5:
-			pass 
+			eliminar_categoria()
 		elif int(opcion) >= 7:
 			print("\n\n Opcion invalida vuelva a intentarlo...")
 			key = input("Presiones cualquier tecla para volver a intentarlo... ")
