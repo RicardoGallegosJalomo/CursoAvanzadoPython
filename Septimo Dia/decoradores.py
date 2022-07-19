@@ -1,20 +1,33 @@
-from random import randint
+class Pajaro:
 
-def lanzar_dados():
-	return randint(1,6),randint(1,6)
+	alas = True # atributo de clase
+
+	def __init__(self,color,especie):
+		self.color = color					#atributos de instancia
+		self.especie = especie
+
+	def piar(self):
+		print('pio, mi color es {}'.format(self.color))
+
+	def volar(self,metros):
+		print(f'El pajaro a volado {metros} metros')
+		self.piar()
+
+	def pintar_negro(self):
+		self.color = 'negro'
+		print(f'Ahora el pajaro es {self.color}')
+
+	@clasmethod
+	def poner_huevos(cls,cantidad):
+		print(f'puso {cantidad} huevos')
+		cls.alas = False
+		print(Pajaro.alas)
+
+	@staticmethod
+	def mirar():
+		print("El pajaro mira")
 
 
-def evaluar_jugada(dado1,dado2):
-	suma_dados = dado1 + dado2
-	if suma_dados <= 6:
-		return f'La suma de tus dados es {suma_dados}. Lamentablemente '
-	elif suma_dados in range(6,10):
-		return f'La suma de tus dados es {suma_dados}. tienes chance '
-	elif suma_dados >= 10:
-		return f'La suma de tus dados es {suma_dados}. jugada ganadora '
+piolin = Pajaro('amarillo','canario')
 
 
-dados = lanzar_dados()
-dado1,dado2 = dados
-
-print(evaluar_jugada(dado1,dado2))

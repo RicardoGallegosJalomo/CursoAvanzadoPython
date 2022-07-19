@@ -16,3 +16,15 @@ piolin = Pajaro('amarillo','canario')
 
 piolin.piar()
 piolin.volar(50)
+
+Herencia
+
+Polimorfismo
+
+Cohesión
+
+Acoplamiento
+
+Abstracción
+
+Encapsulamiento
