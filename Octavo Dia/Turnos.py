@@ -2,50 +2,46 @@
 Despachador de Turnos para una Farmacia
 '''
 
-#from funcionesTurnos import *
+import funcionesTurnos
 
-
-def saludo(funcion):
-
-	def saludos_turnos():
-		
-		print("Su turno es")
-		funcion(turno)
-		print("Espere su turno")
-
-	return saludos_turnos
-
-def perfumeria(turno):
-
-	yield turno = turno + 1
-
-	print
-
-
-opcion = ""
-
-while True:
+def pregunta():
 
 	print(' Bienvenido a la Farmacia de Python \n')
 	print(" A que área desea pasar? \n")
 
-	print(""" Perfumeria [P] 
+	while True:
+
+		print("""                          Perfumeria [P] 
 			  Farmacia   [F]
 			  Cosmetica  [C]
-			  Salir      [S] \n""")
+			  \n""")
 
-	opcion = input("A que área desea dirigirse... \n")
+		try:
 
-	if opcion == "P":
+			mi_rubro = input("Eloja su robro: ").upper()
 
-		turno = saludo(perfumeria) 
-		turno(saludo)
+			["P","F","C"].index(mi_rubro)
+		except ValueError:
+			print("Esa no es una opcion valida")
+		else:
+			break
 
-	elif opcion == "F":
-		pass 
-	elif opcion == "C":
-		pass 
-	else:
-		print("\n Gracias por su visita, Vuelva pronto...")
-		break
+	funcionesTurnos.decorar_saludo(mi_rubro)
 
+def inicio():
+
+	while True:
+
+		pregunta()
+
+		try:
+			otro_turno = input("Quieres sacar otro turno? [S/N]: ").upper()
+			["S", "N"].index(otro_turno)
+		except ValueError:
+			print("Esa no es una opcion Valida... ")
+		else:
+			if otro_turno == "N":
+				print("Gracias por su Visita...")
+				break
+
+inicio()

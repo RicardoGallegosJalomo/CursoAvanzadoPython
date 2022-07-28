@@ -2,20 +2,35 @@
 Funciones de la maquina de Turnos
 '''
 
-def saludo(funcion):
+def decorar_saludo(rubro):
 
-	def saludos_turnos():
-		
-		print("Su turno es")
-		funcion(turno)
-		print("Espere su turno")
+	print("\n " + "*" * 23)
+	print("Su numero es: ")
+	
+	if rubro == "P":
+		print(next(perfum))
+	elif rubro == "F":
+		print(next(farma))
+	else:
+		print(next(cosme))
 
-	return saludos_turnos
+	print("Espere y sera Atendido")
+	print("*" * 23 + "\n ")
 
-def perfumeria(turno):
 
-	yield turno += 1
+def perfumeria():
+	for n in range(1,100):
+		yield f"P - {n}"
 
-	print
+def farmacia():
+	for n in range(1,100):
+		yield f"F - {n}"
 
+def cosmetica():
+	for n in range(1,100):
+		yield f"C - {n}"
+
+perfum = perfumeria()
+farma = farmacia()
+cosme = cosmetica()
 

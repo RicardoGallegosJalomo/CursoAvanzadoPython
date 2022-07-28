@@ -34,7 +34,7 @@ def minuscula(texto):
 	print(texto.lower())
 
 minuscula("Python")
-
+pala = "fede"
 mayuscula_decorada = decorar_saludo(mayuscula) # Hace la funcion del decorador sin el decorador @
 
-mayuscula_decorada('fede')
+mayuscula_decorada(pala)
