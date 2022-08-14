@@ -37,7 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'base',
+    'base.apps.BaseConfig',
 ]
 
 MIDDLEWARE = [
@@ -55,7 +55,7 @@ ROOT_URLCONF = 'proyecto.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['C:\\Users\\Cassandra\\Desktop\\Ultimo Curso de Python\\Dia diesciseis\\MiWeb\\src\\proyecto\\base\\templates\\base'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
